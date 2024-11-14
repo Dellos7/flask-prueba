@@ -25,3 +25,5 @@ pip install Flask
 ```bash
 flask --app hello.py run --debug
 ```
+
+Si añadimos la opción `--host=0.0.0.0` se podrá hacer visible a toda la red
