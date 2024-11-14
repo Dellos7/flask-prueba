@@ -38,4 +38,3 @@ def convertir():
     #return f'Celsius: {celsius}<br>Farenheit: {fahrenheit}<br>Kelvin: {kelvin}'
     return render_template('resultado.html', celsius=celsius, fahrenheit=fahrenheit, kelvin=kelvin)
 
-#mod
