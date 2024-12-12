@@ -35,5 +35,14 @@ def convertir():
     fahrenheit = celsius*9 / 5 + 32
     kelvin = celsius + 273.15
     #return f'Celsius: {celsius}<br>Farenheit: {fahrenheit}<br>Kelvin: {kelvin}'
-    return render_template('resultado.html', celsius=celsius, fahrenheit=fahrenheit, kelvin=kelvin)
+    return render_template('resultado_temperatura.html', celsius=celsius, fahrenheit=fahrenheit, kelvin=kelvin)
 
+
+@app.route('/tabla_multiplicar')
+def tabla_multiplicar():
+    return render_template('tabla_multiplicar.html')
+
+@app.post('/calcular_tabla_multiplicar')
+def resultado_tabla_multiplicar():
+    numero = int(request.form.get('numero'))
+    return render_template('resultado_tabla_multiplicar.html', numero=numero)

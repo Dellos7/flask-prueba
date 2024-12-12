@@ -21,7 +21,7 @@ form{
     justify-content: center;
     flex-flow: column;
 }
-input[type="text"], input[type="submit"] {
+input[type="text"], input[type="submit"], input[type="number"] {
     padding: 10px;
     margin: 10px 0;
     /* width: 100%; */
@@ -44,4 +44,8 @@ button{
     padding: 10px 15px;
     font-weight: bold;
     width: 100%;
+}
+
+td{
+    padding: 5px;
 }

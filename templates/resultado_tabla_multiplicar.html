@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Tabla de multiplicar</h2>
+        <table>
+            <tr>
+                <th>Cálculo</th>
+                <th>Resultado</th>
+            </tr>
+            {% for i in range(11) %}
+            <tr>
+                <td>{{ numero }}x{{ i }}</td>
+                <td>{{ numero*i }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/tabla_multiplicar">
+            <button>Volver</button>
+        </a>
+    </div>
+</body>
+</html>
