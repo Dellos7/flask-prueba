@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <style>
+        li{
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <td>Celsius</td>
-            <td>{{ celsius }}</td>
-        </tr>
-        <tr>
-            <td>Fahrenheit</td>
-            <td>{{ fahrenheit }}</td>
-        </tr>
-        <tr>
-            <td>Kelvin</td>
-            <td>{{ kelvin }}</td>
-        </tr>
-    </table>
+    <div class="container">
+        <h2>Resultado</h2>
+        <ul>
+            <li><span class="negrita">Celsius:</span> {{ celsius }} ºC</li>
+            <li><span class="negrita">Fahrenheit:</span> {{ fahrenheit }} ºF</li>
+            <li><span class="negrita">Kelvin:</span> {{ kelvin }} ºK</li>
+        </ul>
+        <a href="/temperatura">
+            <button>Volver</button>
+        </a>
+    </div>
 </body>
 </html>

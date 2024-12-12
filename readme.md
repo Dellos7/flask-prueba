@@ -7,6 +7,8 @@
 sudo apt install python3.8-venv
 ```
 
+(si no va, probar python3.10-venv)
+
 ### Para crear el proyecto
 Crear una carpeta para el proyecto
 
