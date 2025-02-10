@@ -10,8 +10,19 @@ app = Flask(__name__)
 def hello():
     mydb = mysql.connector.connect(
         host="localhost",
-        user="yourusername",
-        password="yourpassword"
+        user="david",
+        password="12345678",
+        database="ejercicios_html_php"
     )
     print(mydb)
-    return '<p><b>Hello</b>, <u>World!</u></p>'
+
+    mycursor = mydb.cursor()
+
+    mycursor.execute("SELECT * FROM ejercicio3")
+
+    myresult = mycursor.fetchall()
+
+    for x in myresult:
+        print(x)
+
+    return '<p><b>Hello</b>, <u>World! (bbdd)</u></p>'
