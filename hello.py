@@ -29,6 +29,7 @@ def x2(x):
 def temp():
     return render_template('temperatura.html')
 
+# Fijarse que es POST
 @app.post('/convertir')
 def convertir():
     celsius = int(request.form.get('celsius'))
@@ -42,6 +43,7 @@ def convertir():
 def tabla_multiplicar():
     return render_template('tabla_multiplicar.html')
 
+# Fijarse que es POST
 @app.post('/calcular_tabla_multiplicar')
 def resultado_tabla_multiplicar():
     numero = int(request.form.get('numero'))
